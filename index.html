@@ -1,0 +1,540 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <title>Memdeklaro - Self declaration of identity</title>
+  <meta name="description" content="Memdeklaro is a humanitarian open source alternative to government ID">
+  <meta itemprop="name" content="Memdeklaro - Self declaration of identity">
+  <meta itemprop="description" content="Memdeklaro is a humanitarian open source alternative to government ID">
+  <meta itemprop="image" content="https://memdeklaro.github.io/ekzemplo.jpg">
+  <meta property="og:url" content="https://memdeklaro.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Memdeklaro: Self declaration of identity">
+  <meta property="og:description" content="Memdeklaro is a humanitarian open source alternative to government ID">
+  <meta property="og:image" content="https://memdeklaro.github.io/ekzemplo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Memdeklaro - Self declaration of identity">
+  <meta name="twitter:description" content="Memdeklaro is a humanitarian open source alternative to government ID">
+  <meta name="twitter:image" content="https://memdeklaro.github.io/ekzemplo.jpg">
+  <link href="favicon.png" rel="shortcut icon">
+  <style>
+  @font-face {
+    font-family: "OCR-B";
+    src: url("OCR-B.ttf");
+  }
+  @font-face {
+    font-family: "Kelvinch";
+    src: url("Kelvinch-Bold.otf");
+  }
+  @font-face {
+    font-family: "Kelvinch Italic";
+    src: url("Kelvinch-Italic.otf");
+  }
+  @font-face {
+    font-family: "Lexica";
+    src: url("Lexica.ttf");
+  }
+  html {
+    font-family: "Lexica", sans-serif;
+    line-height: 150%;
+    background-image: url(nuboj.jpg);
+  }
+  .container {
+    width: calc(100% - 100px);
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    padding: 35px 60px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0px 0px 8px 4px rgba(255,255,255,0.9);
+    border-radius: 10px;
+  }
+  h1, h2, h3, h4 {
+    font-family: "Kelvinch", serif;
+    font-weight: bold;
+    color: #475284;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  i {
+    color: #717990;
+  }
+  a {
+    color: #475284;
+    text-decoration: underline;
+  }
+  .quote {
+    font-family: "Kelvinch Italic", serif;
+    font-size: 18px;
+    color: #475284;
+    padding: 10px;
+    border-left: 2px solid #6572AC;
+  }
+  .intro, .problem, .solution, .generator, .other, .disclaimer, .reading, .translations {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .intro img {
+    float: right;
+    margin: 10px;
+    height: 300px;
+    width: auto;
+   }
+  .license img {
+    display: block;
+    margin: 10px auto;
+   }
+  .preview {
+    width: 600px;
+    display: inline-block;
+    vertical-align: top;
+    background: #eee;
+    padding: 15px;
+  }
+  .preview .front, .preview .back {
+    margin-bottom: 10px;
+  }
+  .preview .front.default, .preview .back.default {
+    min-height: 300px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .preview .front.default .button, .preview .back.default .button {
+    display: none;
+  }
+  .preview .front.default {
+    background-image: url("fronto.jpg");
+  }
+  .preview .back.default {
+    background-image: url("dorso.jpg");
+  }
+  .preview canvas {
+    max-width: 100%;
+  }
+  .form {
+    width: calc(100% - 670px);
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+  }
+  .form label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  input[type="text"], input[type="file"], textarea {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #555;
+    padding: 2px 6px;
+    font-size: 15px;
+    margin-top: 4px;
+    margin-left: 4px;
+    vertical-align: top;
+  }
+  button, a.button {
+    font-size: 15px;
+    border: 1px solid green;
+    padding: 6px 24px;
+    border-radius: 5px;
+    background: lightgreen;
+    margin: 10px auto;
+    display: block;
+    text-decoration: none;
+    width: auto;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+  }
+  button:hover, a.button:hover {
+    background: green;
+    color: #fff;
+    text-decoration: none;
+  }
+  @media only screen and (max-width: 1100px) {
+    .container {
+      max-width: 800px;
+      padding: 35px 45px;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .container {
+      width: calc(100% - 30px);
+      padding: 20px 15px;
+      margin-top: 15px;
+    }
+    h1 {
+      margin-bottom: 0px;
+    }
+    h1, h2, h3, h4 {
+      text-align: center;
+    }
+    .intro img {
+      display: block;
+      float: none;
+      margin: 5px auto;
+      width: 200px;
+      height: auto;
+    }
+    .preview {
+      width: calc(100% - 60px);
+      display: block;
+      margin: 10px auto;
+    }
+    .form {
+      width: calc(100% - 60px);
+      display: block;
+      margin: 10px auto;
+    }
+    .preview .front, .preview .back {
+      margin: 10px auto;
+      max-width: 600px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1>Memdeklaro de identeco 🕊️</h1>
+  <div class="intro">
+    <img src="ekzemplo.jpg" alt="Example Memdeklaro self-declared ID">
+    <h2>Self-declaration of identity</h2>
+    <p>Memdeklaro is a philosophical project that empowers people to <b>self-declare their own identity</b> - without third parties such as birth parents, birth cultures or birth countries.</p>
+    <p>Memdeklaro positions itself as a <b>humanitarian alternative</b> to the exclusionary state monopoly on identity and supports the three freedoms: freedom of name, freedom of belief and freedom of association.</p>
+    <p>Memdeklaro supports a world where people are judged only on their character, beliefs and actions, not on where they were born, who they were born to, or what their birth culture was. A world where individuals have power over their own lives - the power to leave corrupt governments, hostile cultures and abusers, and thrive in a self-chosen community.</p>
+    <p class="quote">"Self-declaration of identity gives people the power to decide their own fate, and creates a world where actions and beliefs matter more than arbitrary circumstances of birth."</p>
+  </div>
+  <div class="problem">
+    <h2>The Problem</h2>
+    <p><b>Millions of people worldwide have no access to government ID.</b> Nation-states routinely refuse to issue birth certificates, national ID cards and passports to people, most often due to the circumstances of their birth, rather than due to their own actions as an adult. This group may include stateless people, refugees, people who weren’t registered at birth, and people who escaped from child abuse, domestic abuse or cult abuse.</p>
+    <p>As government ID is increasingly required for employment, housing, healthcare, education, travel and daily life necessities, this leaves people at best on the edge of society or at worst criminalized for existing. In this situation, cash in hand jobs and informal apartment rentals are an essential lifeline, but as the state cracks down on the gray market economy, exclusion from the state monopoly on identity could mean life or death.</p>
+    <p class="quote">"You may think economic exclusion — banned from employment, housing, healthcare, education, banking, travel, contracts, mail, sim cards and more — would be a punishment for only the most severe of crimes. But for stateless people, refugees, victims of abuse and people who weren’t registered at birth, it is a punishment for being born."</p>
+    <p>In an ideal world, everyone would be granted a legal identity at age 18, without requirements and without needing permission from birth parents or the birth country. Or there would be a way to earn a legal identity as an adult, or receive an identity based on fingerprints and a photo. Or at least a way to get a stateless passport in order to be allowed to apply for a work, marriage or humanitarian visa in a different country. An adult would be able to independently legalize themselves through their own efforts, regardless of the situation that they were born into.</p>
+    <p>However, the United Nations no longer issues Nansen Passports (despite that they saved thousands of lives), the Red Cross rarely issues Emergency Travel Documents, and nation-states generally refuse to issue stateless passports, even though these exist by law. Access to asylum procedures, stateless determination procedures, delayed registration of birth, child protective services or witness protection is often denied, or in the worst case, the victim is forcibly returned to the abusers against their will.</p>
+    <p class="quote">"It's a vicious circle, where it's illegal to not have ID, but no jurisdiction agrees to print ID for you."</p>
+    <p>Furthermore, the collectivist concept of citizenship can be dangerous. For example, if someone does not identify with their birth culture, they should not be forced to follow it for life. Instead, they should be free to dissent against this culture and leave this culture’s jurisdiction. Even worse is conscription - the cruel system where a nation-state can force someone against their will to kill or be killed, just because they happened to be born inside a certain territory.</p>
+    <p>In the current system, birth countries become cruel captors, without a way to earn release or seek freedom under a different culture or jurisdiction. Your personal beliefs, actions and efforts do not matter. Your inherent humanity and personhood is denied. There is no way to prove your worth or defy the circumstances of your birth.</p>
+  </div>
+  <div class="solution">
+    <h2>The Solution</h2>
+    <p>Memdeklaro takes the power away from the state monopoly and empowers people to define their own name, culture and personal ties.</p>
+    <p class="quote">"The blood of the covenant is thicker than the water of the womb."</p>
+    <p>The <b>self-declaration of identity</b> is a self-printed CR-80 plastic card or paper business card (85.6mm x 54mm). It is not stored in a central database, does not require a third party’s permission and does not need to be issued by an authority. You are the authority over your own life.</p>
+    <p>The self declaration is written in Esperanto, an anational language of peace, built on freedom of belief and freedom of association. It features artwork of a peace dove in the sky.</p>
+    <p>The self-declaration includes the text:</p>
+    <ul>
+      <li>Title: Self-declaration of identity <i>(Memdeklaro de identeco)</i></li>
+      <li>Location: Esperanto community <i>(Esperantujo)</i></li>
+      <li>Issuer: EPO <i>(ISO code for Esperanto)</i></li>
+      <li>Quote: One world, one humankind <i>(Unu mondo, unu homaro)</i></li>
+    </ul>
+    <p>The self-declaration of identity contains:</p>
+    <ul>
+      <li>Self-chosen first name <i>(Antaŭnomo)</i></li>
+      <li>Self-chosen surname <i>(Nomo)</i></li>
+      <li>Birth date <i>(Naskiĝdato)</i></li>
+      <li>Photo <i>(35mm x 45mm)</i></li>
+      <li>Signature <i>(Subskribo)</i></li>
+      <li>Notes field <i>(Notoj)</i><br>Example: “The holder is a conscientious objector” <i>(Portanto estas konscienca obĵetanto)</i></li>
+      <li>Arbitrary ID number <i>(Numero)</i>, issuance date <i>(Eldondato)</i>, expiry date <i>(Limdato)</i>, issuer <i>(Eldonisto)</i>, MRZ</li>
+    </ul>
+    <p>The self-declaration of identity does not contain:</p>
+    <ul>
+      <li>Place of birth<br> → Allows people to cut ties with hostile environments and self-define their culture, beliefs and personal ties</li>
+      <li>Citizenship or stateless status<br> → Allows people to cut ties with hostile governments or cultures, and exist as an individual instead of as property of a state that they did not choose</li>
+      <li>Parents’ names<br> → Allows victims of child abuse to cut ties with abusers</li>
+    </ul>
+    <p>To make your own:</p>
+    <ul>
+      <li>Use the generator on this page</li>
+      <li>Or download the template here: <a href="memdeklaro.zip">memdeklaro.zip</a> and add your text and photo using an image editor</li>
+      <li>Print it out as a business card (85.6mm x 54mm) or order a CR-80 plastic card from a printing service, or use it digitally</li>
+    </ul>
+    <p class="quote">"The choice of your own name and renunciation of your circumstances of birth is a liberating act of individualism, where your ideals, actions and efforts matter more than the situation that you were arbitrarily born into."</p>
+  </div>
+  <div class="generator">
+    <h2>Generator</h2>
+    <p>This generator works locally in your browser. No data is sent to a server or saved anywhere.</p>
+    <div class="preview">
+      <div class="front default">
+        <canvas id="canvas_front"></canvas>
+        <button id="download_front" class="button" onclick="download_front(); return false;">Download front</button>
+      </div>
+      <div class="back default">
+        <canvas id="canvas_back"></canvas>
+        <button id="download_back" class="button" onclick="download_back(); return false;">Download back</button>
+      </div>
+    </div>
+    <div class="form">
+      <form method="post" enctype="multipart/form-data" onsubmit="generate_mrz(); update_declaration(); return false;">
+        <label>
+          First name
+          <input type="text" name="first_name" id="first_name" maxlength="255" placeholder="First name" value="JOHN" required>
+        </label>
+        <label>
+          Surname
+          <input type="text" name="surname" id="surname" maxlength="255" placeholder="Surname" value="DOE" required>
+        </label>
+        <label>
+          Birth date
+          <input type="text" name="birth_date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" id="birth_date" placeholder="YYYY-MM-DD" value="2000-01-01" required>
+        </label>
+        <label>
+          Date of issuance
+          <input type="text" name="issued" id="issued" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" placeholder="YYYY-MM-DD" value="2024-01-31" required>
+        </label>
+        <label>
+          Date of expiry
+          <input type="text" name="expiry" id="expiry" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" placeholder="YYYY-MM-DD" value="2029-01-31" required>
+        </label>
+        <label>
+          ID number (9 digits)
+          <input type="text" name="id_number" id="id_number" pattern="[0-9]{9}" placeholder="111222333" value="111222333" required>
+        </label>
+        <label>
+          Note
+          <textarea name="note" id="note" maxlength="255" placeholder="Note (max 2 lines)" required></textarea>
+        </label>
+        <label>
+          Issuer
+          <input type="text" name="issuer" id="issuer" maxlength="120" placeholder="EPO" value="EPO" required>
+        </label>
+        <label>
+          MRZ
+          <textarea name="mrz" id="mrz" placeholder="MRZ (Auto generated)" readonly></textarea>
+        </label>
+        <label>
+          Photo (35mm x 45mm)
+          <input type="file" name="photo" id="photo" accept="image/*">
+        </label>
+        <label>
+          Signature
+          <input type="file" name="signature" id="signature" accept="image/*">
+        </label>
+        <button class="button" type="submit" id="submit" name="submit">Generate</button>
+      </form>
+    </div>
+  <div class="other">
+    <h2>Alternative non-government IDs</h2>
+    <ul>
+      <li>World Passport: <a href="https://worldcitizengov.org/what-is-the-world-passport/">https://worldcitizengov.org/what-is-the-world-passport/</a> It is possible to apply for a World Passport using only fingerprints. An existing government ID is not required.</li>
+      <li>Digitalcourage ID: <a href="https://shop.digitalcourage.de/gadgets/lichtbildausweis-mit-selbst-waehlbaren-daten.html">https://shop.digitalcourage.de/gadgets/lichtbildausweis-mit-selbst-waehlbaren-daten.html</a> You can get a Digitalcourage ID under a self-chosen name. An existing government ID is not required.</li>
+    </ul>
+  </div>
+  <div class="disclaimer">
+    <h2>Disclaimer</h2>
+    <p>ID requirements do more harm than good and should not be seen as a viable solution for trust or authentication.</p>
+    <p>Requiring a government-assigned identity only began in recent decades. For most of human history, self-declaration was the norm and caused no issues. </p>
+    <p>People did not need a signed certificate from the King in order to live their lives. People could travel from place to place without hindrance, with the goal of finding somewhere to belong, where they could prove their worth, work hard and build a good life.</p>
+    <p>For most transactions, it should be enough to simply introduce yourself with your self-chosen name, use vouches or a web of trust, use a password, code or physical key, use an escrow, cash deposit or mediator, or pay in a bearer instrument like cash or Monero.</p>
+    <p>The world would be freer and more prosperous if people could build a reputation based on their actions and personal beliefs, rather than be condemned to their circumstances of birth, without a way to earn freedom as an adult.</p>
+  </div>
+  <div class="reading">
+    <h2>Further Reading</h2>
+    <p>For further reading about identity:</p>
+    <p>Passports Were a “Temporary” War Measure - Speranta Dumitru
+    <br><a href="https://fee.org/articles/passports-were-a-temporary-war-measure">https://fee.org/articles/passports-were-a-temporary-war-measure</a></p>
+    <p>During World War II, we did have something to hide - Hans de Zwart
+    <br><a href="https://medium.com/@hansdezwart/during-world-war-ii-we-did-have-something-to-hide-40689565c550">https://medium.com/@hansdezwart/during-world-war-ii-we-did-have-something-to-hide-40689565c550</a></p>
+    <p>The Little-Known Passport That Protected 450,000 Refugees - Cara Giaimo
+    <br><a href="https://www.atlasobscura.com/articles/nansen-passport-refugees">https://www.atlasobscura.com/articles/nansen-passport-refugees</a></p>
+    <p>With each person left living on the streets, we are losing as a society - Petr Baroch
+    <br><a href="https://www.statelessness.eu/blog/each-person-left-living-streets-we-are-losing-society">https://www.statelessness.eu/blog/each-person-left-living-streets-we-are-losing-society</a></p>
+    <p>The rarely discussed dangers of KYC and what you can do about it - Anarkio
+    <br><a href="https://vonupodcast.com/know-your-customer-kyc-the-rarely-discussed-danger-guest-article-audio">https://vonupodcast.com/know-your-customer-kyc-the-rarely-discussed-danger-guest-article-audio</a></p>
+    <p>Exclusion and identity: life without ID - Privacy International
+    <br><a href="https://www.privacyinternational.org/long-read/2544/exclusion-and-identity-life-without-id">https://www.privacyinternational.org/long-read/2544/exclusion-and-identity-life-without-id</a></p>
+    <p>Proving who I am: the plight of people in detention without proof of legal identity - Vicki Prais
+    <br><a href="https://www.penalreform.org/blog/proving-who-i-am-the-plight-of-people/">https://www.penalreform.org/blog/proving-who-i-am-the-plight-of-people/</a></p>
+    <p>Establishing identity is a vital, risky and changing business - The Economist
+    <br><a href="https://www.economist.com/christmas-specials/2018/12/18/establishing-identity-is-a-vital-risky-and-changing-business">https://www.economist.com/christmas-specials/2018/12/18/establishing-identity-is-a-vital-risky-and-changing-business</a></p>
+    <p>What’s in a name? The case for inclusivity through anonymity - Common Thread
+    <br><a href="https://blog.twitter.com/common-thread/en/topics/stories/2021/whats-in-a-name-the-case-for-inclusivity-through-anonymity">https://blog.twitter.com/common-thread/en/topics/stories/2021/whats-in-a-name-the-case-for-inclusivity-through-anonymity</a></p>
+    <p>True Names Not Required: On Identity and Pseudonymity in Cyberspace - Der Gigi
+    <br><a href="https://dergigi.medium.com/true-names-not-required-fc6647dfe24a">https://dergigi.medium.com/true-names-not-required-fc6647dfe24a</a></p>
+  </div>
+  <div class="license">
+    <h2>License</h2>
+    <p>This is free and unencumbered software released into the public domain.</p>
+    <a href="https://github.com/memdeklaro/">
+      <img src="mini.png" alt="Memdeklaro Github">
+    </a>
+    <p>View as: <a href="libro.pdf">Ebook</a>, <a href="sonlibro.mp3">Audiobook</a>, <a href="prezento.pdf">Slides</a>, <a href="prezento.mp4">Video</a></p>
+  </div>
+  </div>
+  <script>
+  function generate_mrz() {
+    var first_name = document.querySelector("#first_name").value;
+    var first_name = first_name.replace(/[\-\ ]/g, "<");
+    var first_name = first_name.normalize("NFD").replace(/[^A-Z\<]/gi, "").toUpperCase();
+    var surname = document.querySelector("#surname").value;
+    var surname = surname.replace(/[\-\ ]/g, "<");
+    var surname = surname.normalize("NFD").replace(/[^A-Z\<]/gi, "").toUpperCase();
+    var birth_date = document.querySelector("#birth_date").value;
+    var birth_date = birth_date.split("-").join("").substring(2);
+    var expiry = document.querySelector("#expiry").value;
+    var expiry = expiry.split("-").join("").substring(2);
+    var id_number = document.querySelector("#id_number").value;
+    var final = checksum(id_number + checksum(id_number) + birth_date + checksum(birth_date) + expiry + checksum(expiry));
+    var mrz1 = "I<EPO" + id_number + checksum(id_number) + "<<<<<<<<<<<<<<<";
+    var mrz2 = birth_date + checksum(birth_date) + "<" + expiry + checksum(expiry) + "<<<<<<<<<<<<<<" + final;
+    var mrz3 = surname + "<<" + first_name;
+    if(mrz3.length >= 30) {
+      var mrz3 = mrz3.slice(0, 29);
+    }
+    while(mrz3.length < 30) {
+      var mrz3 = mrz3 + "<";
+    }
+    document.querySelector("#mrz").value = mrz1 + "\n" + mrz2 + "\n" + mrz3;
+  }
+
+  function checksum(str) {
+    var counter = 0;
+    var total = 0;
+    for(var i = 0; i < str.length; i++) {
+      if(counter == 3) {
+        var counter = 0;
+      }
+      if(counter == 0) {
+        var total = total + (parseInt(str[i]) * 7);
+      }
+      if(counter == 1) {
+        var total = total + (parseInt(str[i]) * 3);
+      }
+      if(counter == 2) {
+        var total = total + (parseInt(str[i]) * 1);
+      }
+      counter++;
+    }
+    var check_digit = total % 10;
+    return check_digit;
+  }
+
+  function update_declaration() {
+    document.querySelector("#submit").innerText = "Generating, please wait...";
+    document.fonts.load("54px OCR-B").then(() => {
+      var surname = document.querySelector("#surname").value.toUpperCase();
+      var first_name = document.querySelector("#first_name").value.toUpperCase();
+      var birth_date = document.querySelector("#birth_date").value;
+      var issued = document.querySelector("#issued").value;
+      var expiry = document.querySelector("#expiry").value;
+      var id_number = document.querySelector("#id_number").value;
+      var note = document.querySelector("#note").value.toUpperCase();
+      var issuer = document.querySelector("#issuer").value.toUpperCase();
+      var mrz = document.querySelector("#mrz").value;
+      var photo = document.querySelector("#photo").files[0];
+      var signature = document.querySelector("#signature").files[0];
+    
+      var canvas_front = document.querySelector("#canvas_front");
+      var ctx_front = canvas_front.getContext("2d");
+      var template_front = new Image();
+      template_front.onload = () => {
+        document.querySelector(".front").classList.remove("default");
+        canvas_front.width = template_front.width;
+        canvas_front.height = template_front.height;
+        ctx_front.drawImage(template_front, 0, 0);
+        ctx_front.font = "58px OCR-B";
+        ctx_front.fillStyle = "rgb(0, 0, 0)";
+        ctx_front.textAlign = "left";
+        ctx_front.textBaseline = "top";
+        ctx_front.fillText(surname, 860, 335);
+        ctx_front.fillText(first_name, 860, 515);
+        ctx_front.font = "52px OCR-B";
+        ctx_front.fillText(birth_date, 860, 695);
+        ctx_front.fillText(issued, 860, 875);
+        ctx_front.fillText(expiry, 1420, 875);
+        ctx_front.fillText(id_number, 1420, 1055);
+        var add_photo = new Image();
+        add_photo.onload = () => {
+          var radius = 40;
+          var x1 = 60;
+          var x2 = 60 + 745;
+          var y1 = 256;
+          var y2 = 256 + 956;
+          ctx_front.beginPath();
+          ctx_front.moveTo((x1 + radius), y1);
+          ctx_front.arcTo(x2, y1, x2, y2, radius);
+          ctx_front.arcTo(x2, y2, x1, y2, radius);
+          ctx_front.arcTo(x1, y2, x1, y1, radius);
+          ctx_front.arcTo(x1, y1, x2, y1, radius);
+          ctx_front.closePath();
+          ctx_front.save();
+          ctx_front.clip();
+          ctx_front.drawImage(add_photo, 60, 256, 745, 956);
+          ctx_front.restore();
+        };
+        add_photo.src = URL.createObjectURL(photo);
+        var add_signature = new Image();
+        add_signature.onload = () => {
+          ctx_front.globalCompositeOperation = "multiply";
+          ctx_front.drawImage(add_signature, 870, 1055, Math.round(add_signature.width * (150 / add_signature.height)), 150);
+          ctx_front.globalCompositeOperation = "source-over";
+        };
+        add_signature.src = URL.createObjectURL(signature);
+        document.querySelector("#submit").innerText = "Generate";
+      };
+      template_front.src = "fronto.jpg";
+   
+      var canvas_back = document.querySelector("#canvas_back");
+      var ctx_back = canvas_back.getContext("2d");
+      var template_back = new Image();
+      template_back.onload = () => {
+        document.querySelector(".back").classList.remove("default");
+        canvas_back.width = template_back.width;
+        canvas_back.height = template_back.height;
+        ctx_back.drawImage(template_back, 0, 0);
+        ctx_back.font = "50px OCR-B";
+        ctx_back.fillStyle = "rgb(0, 0, 0)";
+        ctx_back.textAlign = "left";
+        ctx_back.textBaseline = "top";
+        var note_line_height = 70;
+        var note_lines = note.split("\n");
+        for(var i = 0; i < note_lines.length; i++) {
+          ctx_back.fillText(note_lines[i], 55, 155 + (note_line_height * i));
+        }
+        ctx_back.font = "58px OCR-B";
+        ctx_back.fillText(issuer, 55, 415);
+        ctx_back.font = "60px OCR-B";
+        var mrz_line_height = 90;
+        var mrz_lines = mrz.split("\n");
+        for(var i = 0; i < mrz_lines.length; i++) {
+          ctx_back.fillText(mrz_lines[i], 215, 890 + (mrz_line_height * i));
+        }
+      };
+      template_back.src = "dorso.jpg";
+    });
+  }
+  
+  function download_front() {
+    var download_link = document.createElement("a");
+    download_link.setAttribute("download", "front.png");
+    var canvas = document.querySelector("#canvas_front");
+    canvas.toBlob(function(blob) {
+      var url = URL.createObjectURL(blob);
+      download_link.setAttribute("href", url);
+      download_link.click();
+    });
+  }
+
+  function download_back() {
+    var download_link = document.createElement("a");
+    download_link.setAttribute("download", "back.png");
+    var canvas = document.querySelector("#canvas_back");
+    canvas.toBlob(function(blob) {
+      var url = URL.createObjectURL(blob);
+      download_link.setAttribute("href", url);
+      download_link.click();
+    });
+  }
+  </script>
+</body>
+</html>

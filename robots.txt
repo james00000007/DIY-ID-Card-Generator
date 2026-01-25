@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://memdeklaro.github.io/sitemap.xml
